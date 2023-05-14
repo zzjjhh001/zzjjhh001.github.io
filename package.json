@@ -1,0 +1,19 @@
+{
+  "name": "personal-disk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzjjhh001/personal-disk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzjjhh001/personal-disk/issues"
+  },
+  "homepage": "https://github.com/zzjjhh001/personal-disk#readme"
+}
