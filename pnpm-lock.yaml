@@ -17,6 +17,9 @@ importers:
       scss:
         specifier: ^0.2.4
         version: 0.2.4
+      vite-plugin-resolve-externals:
+        specifier: ^0.2.2
+        version: 0.2.2
       vue:
         specifier: ^3.3.11
         version: 3.3.11(typescript@5.3.3)
@@ -42,6 +45,9 @@ importers:
 
   packages/disk:
     dependencies:
+      cos-js-sdk-v5:
+        specifier: ^1.5.0
+        version: 1.5.0
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(typescript@5.3.3)(vue@3.3.11)
@@ -1166,6 +1172,11 @@ packages:
     resolution: {integrity: sha512-VcZK7MvpjuTPx2w6blwnwZAu5/LgBUtejFOi3pPGQFXQN5Ela03FUtd2Qtg4yWGGissVL0dr6Ro1LfOFh+PCuQ==, tarball: https://registry.npmmirror.com/@vue/tsconfig/-/tsconfig-0.5.1.tgz}
     dev: true
 
+  /@xmldom/xmldom@0.8.10:
+    resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==, tarball: https://registry.npmmirror.com/@xmldom/xmldom/-/xmldom-0.8.10.tgz}
+    engines: {node: '>=10.0.0'}
+    dev: false
+
   /acorn-jsx@5.3.2(acorn@8.11.3):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==, tarball: https://registry.npmmirror.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz}
     peerDependencies:
@@ -1348,6 +1359,12 @@ packages:
   /convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==, tarball: https://registry.npmmirror.com/convert-source-map/-/convert-source-map-2.0.0.tgz}
     dev: true
+
+  /cos-js-sdk-v5@1.5.0:
+    resolution: {integrity: sha512-1Y3VFFIaPnnCcxJRoWRrCCxmhihihMjDh+2F61iUdT6fOGtVq8hYPQF6uBnKNwB/aF41wCeBgvibGy0wimXDlA==, tarball: https://registry.npmmirror.com/cos-js-sdk-v5/-/cos-js-sdk-v5-1.5.0.tgz}
+    dependencies:
+      '@xmldom/xmldom': 0.8.10
+    dev: false
 
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==, tarball: https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz}
@@ -2382,6 +2399,10 @@ packages:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /vite-plugin-resolve-externals@0.2.2:
+    resolution: {integrity: sha512-RHwCA5z+oGwxlqVSJq43qjphpImq8N44NwqjUVqK3aH13R1C4JJM7ApRtOmkfU2x/paN7kdSwf252VVfKEVsQw==, tarball: https://registry.npmmirror.com/vite-plugin-resolve-externals/-/vite-plugin-resolve-externals-0.2.2.tgz}
+    dev: false
 
   /vite@5.0.10(@types/node@18.19.4)(sass@1.69.6):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==}
