@@ -4,16 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:disk": "pnpm run --filter personaldisk dev",
+    "build:disk": "pnpm run --filter personaldisk build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zzjjhh001/personal-disk.git"
   },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zzjjhh001/personal-disk/issues"
   },
-  "homepage": "https://github.com/zzjjhh001/personal-disk#readme"
+  "homepage": "https://github.com/zzjjhh001/personal-disk#readme",
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "sass": "^1.69.6",
+    "scss": "^0.2.4",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "vite": "^5.0.10"
+  }
 }
