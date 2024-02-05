@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .fileList {
   width: 80%;
@@ -21,4 +21,16 @@
   border: 1px solid #000;
   text-align: center;
   line-height: 100px;
+}
+.add_box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  &>* {
+    flex: 0 0 100px;
+  }
+  &>:nth-child(2) {
+    flex: 1 1 60vw;
+  }
 }

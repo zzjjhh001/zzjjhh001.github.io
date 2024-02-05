@@ -28,7 +28,6 @@
     "pinia": "^2.1.7",
     "sass": "^1.69.6",
     "scss": "^0.2.4",
-    "vite-plugin-resolve-externals": "^0.2.2",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
@@ -37,6 +36,7 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "vite-plugin-resolve-externals": "^0.2.2"
   }
 }

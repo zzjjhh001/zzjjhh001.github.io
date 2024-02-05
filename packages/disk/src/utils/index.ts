@@ -10,7 +10,7 @@ export const getCos = () => {
   }
   return cosInstance;
 }
-export const uploadFile = (fileName: string, file: File, Func: Function) => {
+export const uploadFile = (fileName: string, file: File | '', Func: Function) => {
   const cos = getCos();
   const { Bucket, Region } = lifeConfig;
   cos.uploadFile({
