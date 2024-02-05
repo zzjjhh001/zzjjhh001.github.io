@@ -4,9 +4,11 @@ import styles from './index.module.scss';
 import { lifeConfig } from '@/utils/const';
 import { message } from "ant-design-vue";
 import { uploadFile } from "@/utils";
+import user from '@/stores/counter';
 const component = defineComponent({
   name: 'DiskView',
   setup() {
+    const store = user();
     const fileList = ref<any[]>([]);
     const cos = getCos();
     const { Bucket, Region } = lifeConfig;
@@ -24,9 +26,7 @@ const component = defineComponent({
     }
     const itemShow = (item: any) => {
       const { Key } = item;
-      return <>
-        <div>{Key}</div>
-      </>;
+      return <div>{Key}</div>;
     }
     const uploadClick = () => {
       const input = document.createElement('input');
@@ -45,11 +45,14 @@ const component = defineComponent({
           proList.push(upload(name, item));
         })
       );
+      store.isLoading = true;
       Promise.all(proList).then(() => {
         message.success('上传成功');
         getFiles();
       }).catch(() => {
         message.error('上传失败');
+      }).finally(() => {
+        store.isLoading = false;
       });
     };
     const upload = (fileName: string, file: File) => {
