@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:disk": "pnpm run --filter disk dev",
+    "dev:disk": "pnpm run --filter disk dev --host",
     "build:disk": "pnpm run --filter disk build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/zzjjhh001/personal-disk#readme",
   "dependencies": {
+    "ant-design-vue": "^4.1.2",
     "pinia": "^2.1.7",
     "sass": "^1.69.6",
     "scss": "^0.2.4",
