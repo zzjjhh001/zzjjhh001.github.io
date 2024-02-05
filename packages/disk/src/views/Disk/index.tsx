@@ -36,10 +36,11 @@ const component = defineComponent({
       input.click();
     }
     const error = ref('');
-    const uploadHandle = (e: Event| string) => {
+    const uploadHandle = (e: Event) => {
       console.log(222, e);
-      error.value = JSON.parse(e as string);
-      const files = ((e as Event).target as HTMLInputElement).files;
+      console.log(222, e.target);
+      console.log(222, (e.target as HTMLInputElement).files);
+      const files = (e.target as HTMLInputElement).files;
       const proList: Promise<Boolean>[] = [];
       Array.prototype.forEach.call(
         files,
