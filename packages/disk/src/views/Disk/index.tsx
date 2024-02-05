@@ -35,8 +35,11 @@ const component = defineComponent({
       input.addEventListener('change', uploadHandle);
       input.click();
     }
-    const uploadHandle = (e: Event) => {
-      const files = (e.target as HTMLInputElement).files;
+    const error = ref('');
+    const uploadHandle = (e: Event| string) => {
+      console.log(222, e);
+      error.value = JSON.parse(e as string);
+      const files = ((e as Event).target as HTMLInputElement).files;
       const proList: Promise<Boolean>[] = [];
       Array.prototype.forEach.call(
         files,
@@ -70,6 +73,7 @@ const component = defineComponent({
     getFiles();
     return () => (
       <div class={styles.main}>
+        <div>{error.value}</div>
         <div>点击上传文件，将文件备份到腾讯云上，上传结束前不要刷新页面</div>
         <div class={styles.upload} onClick={uploadClick}>上传文件</div>
         <div class={styles.fileList}>
