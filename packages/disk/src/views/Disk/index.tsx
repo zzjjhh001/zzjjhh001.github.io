@@ -32,6 +32,7 @@ const component = defineComponent({
       const input = document.createElement('input');
       input.type = 'file';
       input.multiple  = true;
+      input.accept = 'image/*,video/*';
       input.addEventListener('change', uploadHandle);
       input.click();
     }
